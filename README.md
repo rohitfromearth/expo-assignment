@@ -1,123 +1,145 @@
-# Video Player & Web Browser App
+# Expo Video Player & Web Browser App
 
-A React Native app with video player and web browser functionality.
+A React Native app built with Expo that combines video streaming and web browsing functionality. This project demonstrates mobile app development using modern React Native practices.
 
-## Features
+## What This App Does
 
-### Video Player
-- Video selection screen with dropdown menu
-- Full video player with controls
-- Responsive design for different screen sizes
-- Video controls: play/pause, mute, seek, skip, fullscreen
-- Multiple video streams available
+This app lets you:
+- Browse websites in a built-in web browser
+- Watch videos with full playback controls
+- Test push notifications
+- Switch between different video streams
 
-### Web Browser
-- WebView for browsing websites
-- Notification testing buttons
-- Responsive layout
+## Getting Started
 
-### Navigation
-- Bottom tab navigation
-- Stack navigation between screens
-- Notification navigation support
+### Prerequisites
 
-### Notifications
-- Quick and delayed notifications
-- Navigation via notifications
-- Permission handling
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (version 16 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
 
-## Technical Features
+### Installation Steps
 
-### Responsive Design
-- Components adapt to different screen sizes
-- Portrait and landscape orientation support
-- Dynamic sizing based on screen dimensions
-- Safe area handling
+1. **Install Expo CLI globally** (if you haven't already):
+   ```bash
+   npm install -g @expo/cli
+   ```
 
-### Video Player Features
-- Native video playback with Expo AV
-- Custom video controls
-- Multiple video stream support
-- Fullscreen playback
-- Video seeking with slider
+2. **Clone or download this project** to your local machine
 
-### Web Browser Features
-- WebView for web browsing
-- Notification integration
-- Responsive button layout
+3. **Navigate to the project directory**:
+   ```bash
+   cd expo-assignment
+   ```
 
-## Installation
-
-1. Clone the repository
-2. Install dependencies:
+4. **Install project dependencies**:
    ```bash
    npm install
    ```
-3. Start the development server:
+
+5. **Start the development server**:
    ```bash
-   npm start
-   ```
-4. Run on your preferred platform:
-   ```bash
-   npm run android
-   npm run ios
-   npm run web
+   npx expo start
    ```
 
-## Note on Notifications
+### Running the App
 
-Notifications may not work in Expo Go. For full functionality, consider using a development build.
+After starting the development server, you'll see a QR code in your terminal. You can:
 
-## Dependencies
+- **On Android**: Scan the QR code with the Expo Go app
+- **On iOS**: Scan the QR code with your camera app
+- **On Web**: Press `w` in the terminal to open in browser
+- **On Simulator**: Press `a` for Android emulator or `i` for iOS simulator
 
-- `@react-navigation/native` - Navigation framework
-- `@react-navigation/bottom-tabs` - Tab navigation
-- `@react-navigation/stack` - Stack navigation
-- `expo-av` - Video and audio playback
-- `react-native-webview` - Web browser functionality
-- `expo-notifications` - Push notifications
-- `@react-native-community/slider` - Video seek slider
-- `@expo/vector-icons` - Icon library
+### Alternative Commands
+
+If you prefer using npm scripts:
+```bash
+npm start          # Start Expo development server
+npm run android    # Run on Android device/emulator
+npm run ios        # Run on iOS device/simulator
+npm run web        # Run in web browser
+```
 
 ## Project Structure
 
 ```
 expo-assignment/
-├── App.js                 # Main app with navigation setup
+├── App.js                 # Main app entry point
 ├── components/
 │   └── CustomButton.js    # Reusable button component
 ├── screens/
-│   ├── VideoHomeScreen.js # Video selection screen
-│   ├── VideoPlayerScreen.js # Video player screen
+│   ├── VideoHomeScreen.js # Video selection interface
+│   ├── VideoPlayerScreen.js # Video player with controls
 │   └── WebViewScreen.js   # Web browser screen
-└── assets/                # App icons and images
+├── assets/                # App icons and images
+├── package.json           # Dependencies and scripts
+└── app.json              # Expo configuration
 ```
 
-## Usage
+## Key Features
 
-1. Use the Web Browser tab to browse websites
-2. Use the Video Player tab to select and watch videos
-3. Test notifications using the buttons
-4. Use video controls to manage playback
+### Video Player
+- Choose from multiple video streams
+- Full playback controls (play/pause, seek, volume, fullscreen)
+- Responsive design that works on different screen sizes
 
-## Responsive Design
+### Web Browser
+- Built-in web browser using WebView
+- Test notification functionality
+- Navigate between app sections
 
-The app works across different device sizes:
+### Notifications
+- Schedule test notifications
+- Navigate to different screens via notifications
+- Permission handling for notifications
 
-- Small screens: Components scale appropriately
-- Large screens: Efficient space utilization
-- Tablets: Optimized layouts
-- Orientation changes: Automatic adjustments
-- Safe areas: Proper device handling
+## Dependencies
 
-## Contributing
+The main packages used in this project:
+- `expo` - React Native development platform
+- `expo-av` - Video and audio playback
+- `react-native-webview` - Web browser functionality
+- `expo-notifications` - Push notifications
+- `@react-navigation/native` - Navigation framework
+- `@react-native-community/slider` - Video seek slider
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+## Troubleshooting
 
-## License
+### Common Issues
 
-This project is licensed under the MIT License.
+**"Expo Go not found"**: Make sure you have the Expo Go app installed on your device.
+
+**"Metro bundler error"**: Try clearing the cache:
+```bash
+npx expo start --clear
+```
+
+**"Dependencies not found"**: Delete node_modules and reinstall:
+```bash
+rm -rf node_modules
+npm install
+```
+
+**Notifications not working**: Notifications require a development build for full functionality. In Expo Go, they may be limited.
+
+### Development Notes
+
+- The app is configured for portrait orientation
+- Video streams are from public test sources
+- WebView loads a sample educational website
+- Color scheme uses a custom palette for consistent branding
+
+## Next Steps
+
+To extend this project, you could:
+- Add more video sources
+- Implement user authentication
+- Add video favorites functionality
+- Create a custom video player skin
+- Integrate with a backend API
+
+---
+
+*Built with React Native and Expo*
